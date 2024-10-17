@@ -1,6 +1,6 @@
 #pragma once
 
-#include "ll/api/plugin/NativePlugin.h"
+#include "ll/api/mod/NativeMod.h"
 #include <filesystem>
 
 namespace better_ban {
@@ -10,9 +10,9 @@ class BetterBan {
 public:
     static BetterBan& getInstance();
 
-    BetterBan(ll::plugin::NativePlugin& self) : mSelf(self) {}
+    BetterBan(ll::mod::NativeMod& self) : mSelf(self) {}
 
-    [[nodiscard]] ll::plugin::NativePlugin& getSelf() const { return mSelf; }
+    [[nodiscard]] ll::mod::NativeMod& getSelf() const { return mSelf; }
 
     /// @return True if the plugin is loaded successfully.
     bool load();
@@ -35,7 +35,7 @@ public:
     // bool unload();
 
 private:
-    ll::plugin::NativePlugin& mSelf;
+    ll::mod::NativeMod& mSelf;
 };
 
 } // namespace better_ban

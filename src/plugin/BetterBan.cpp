@@ -10,8 +10,8 @@
 #include "ll/api/command/CommandRegistrar.h"
 #include "ll/api/event/EventBus.h"
 #include "ll/api/event/player/PlayerJoinEvent.h"
-#include "ll/api/plugin/NativePlugin.h"
-#include "ll/api/plugin/RegisterHelper.h"
+#include "ll/api/mod/NativeMod.h"
+#include "ll/api/mod/RegisterHelper.h"
 #include "ll/api/service/Bedrock.h"
 #include "ll/api/service/Service.h"
 #include "ll/api/service/ServiceManager.h"
@@ -289,4 +289,4 @@ void BetterBan::initServices() {
 }
 } // namespace better_ban
 
-LL_REGISTER_PLUGIN(better_ban::BetterBan, better_ban::instance);
+LL_REGISTER_MOD(better_ban::BetterBan, better_ban::instance);
